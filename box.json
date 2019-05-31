@@ -1,0 +1,39 @@
+{
+    "name":"cfmailchimp",
+    "slug":"cfmailchimp",
+    "version":"0.3.0",
+    "author":"Jordan Clark <jordanclark@gmail.com>",
+    "keywords":[
+        "mailchimp",
+		"ecommerce",
+		"email",
+        "api",
+        "rest"
+    ],
+    "shortDescription":"API client for mailchimp.com",
+    "type":"modules",
+    "location":"jordanclark/cfmailchimp#v0.3.0",
+    "repository":{
+        "URL":"https://github.com/jordanclark/cfmailchimp.git",
+        "type":"GIT"
+    },
+    "homepage":"https://github.com/jordanclark/cfmailchimp",
+    "bugs":"https://github.com/jordanclark/cfmailchimp/issues",
+    "license":[
+        {
+            "type":"Apache-2.0",
+            "URL":"https://github.com/jordanclark/cfmailchimp/blob/master/LICENSE"
+        }
+    ],
+    "private":false,
+    "ignore":[
+        "**/.*",
+        "/test/",
+        "/tests/"
+    ],
+    "scripts":{
+        "postVersion":"package set location='jordanclark/cfmailchimp#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push --follow-tags"
+    }
+}

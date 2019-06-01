@@ -1,4 +1,4 @@
-<cfcomponent extends="oldies.components.mailChimp" displayname="MailChimp" hint="I use the Mail Chimp API" output="false">
+<cfcomponent extends="mailChimp" displayname="MailChimp" hint="I use the Mail Chimp API" output="false">
 
 
 <!--- ---------------------------------------------------------------------------------------------------------- --->

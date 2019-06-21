@@ -1150,7 +1150,7 @@
 				<cfset out.error = out.response.error>
 			</cfif>
 			<cfcatch>
-				<cfset out.error = "JSON Error: " & cfcatch.message>
+				<cfset out.error= "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail")>
 			</cfcatch>
 		</cftry>
 	</cfif>

@@ -1499,7 +1499,7 @@
 	<cfif out.verb IS "GET">
 		<cfset out.requestUrl &= this.structToQueryString( out.args, true )>
 	<cfelseif NOT structIsEmpty( out.args )>
-		<cfset out.body = serializeJSON( out.args )>
+		<cfset out.body = serializeJSON( out.args, false, false )>
 	</cfif>
 	
 	<cfset this.debugLog( "APIv3: #uCase( out.verb )#: #out.requestUrl#" )>
@@ -1607,7 +1607,7 @@
 	<cfset this.debugLog( "APIv3 Add Batch: #uCase( out.method )#: #out.path#" )>
 	
 	<cfif out.method IS NOT "GET">
-		<cfset out[ "body" ] = serializeJSON( arguments )>
+		<cfset out[ "body" ] = serializeJSON( arguments, false, false )>
 		<cfset this.debugLog( out.body )>
 	</cfif>
 	
@@ -1641,7 +1641,7 @@
 	
 	<cfset out.requestUrl &= "batches">
 
-	<cfset out.body = serializeJSON( { "operations"= out.batch } )>
+	<cfset out.body = serializeJSON( { "operations"= out.batch }, false, false )>
 	
 	<cfset this.debugLog( "APIv3: BATCH POST: #out.requestUrl#" )>
 	<cfif request.debug AND request.dump>

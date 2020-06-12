@@ -1080,7 +1080,7 @@
 	<cfif out.verb IS "GET">
 		<cfset out.requestUrl &= this.structToQueryString( out.args, true )>
 	<cfelseif NOT structIsEmpty( out.args )>
-		<cfset out.body = serializeJSON( out.args )>
+		<cfset out.body = serializeJSON( out.args, false, false )>
 	</cfif>
 	
 	<cfset this.debugLog( "APIv2: #uCase( out.verb )#: #out.requestUrl#" )>

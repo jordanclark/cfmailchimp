@@ -1,7 +1,7 @@
 {
     "name":"cfmailchimp",
     "slug":"cfmailchimp",
-    "version":"0.3.3",
+    "version":"0.3.4",
     "author":"Jordan Clark <jordanclark@gmail.com>",
     "keywords":[
         "mailchimp",
@@ -12,7 +12,7 @@
     ],
     "shortDescription":"API client for mailchimp.com",
     "type":"modules",
-    "location":"jordanclark/cfmailchimp#v0.3.3",
+    "location":"jordanclark/cfmailchimp#v0.3.4",
     "repository":{
         "URL":"https://github.com/jordanclark/cfmailchimp.git",
         "type":"GIT"
